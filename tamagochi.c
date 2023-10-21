@@ -26,14 +26,22 @@ int main()
 				int opc_jugar;
 				printf("\n\n			--Jugar--\n");
 				printf("			Jugar a la pelota...[1]");
+				printf("\n			Jugar videojuegos...[2]");
 				scanf("%d", &opc_jugar);
 
 				switch(opc_jugar)
 				{
 					case 1:
-						printf("			Gracias por jugar a la pelota conmigo :D");
+						printf("\n			Gracias por jugar a la pelota conmigo :D\n");
 						energia -= 10;
 						hambre += 5;
+						break;
+					case 2:
+						printf("\n			Gracias por jugar videojuegos conmigo :D\n");
+						energia -= 5;
+						hambre += 10;
+						break;
+
 				}
 				break;
 			case 2:
