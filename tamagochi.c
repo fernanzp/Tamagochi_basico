@@ -69,7 +69,8 @@ int main()
 					printf("\n\n			        --Comer--\n");
 					printf("			Comer una manzana.....[1]");
 					printf("\n			Comer comida china....[2]");
-					printf("\n			Regresar............[4]");
+					printf("\n			Comer espagueti.......[3]");
+					printf("\n			Regresar..............[4]");
 					printf("\n			");
 					scanf("%d", &opc_comer);
 	
@@ -86,6 +87,9 @@ int main()
 							hambre -= 20;
 							break;
 						case 3:
+							printf("\n			Mmmmm ¡rico! :D\n");
+							energia += 10;
+							hambre -= 15;
 							break;
 						case 4:
 							printf("\n			¡Gracias por alimentar tu Tamagochi!\n");
