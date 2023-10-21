@@ -63,6 +63,35 @@ int main()
 
 				break;
 			case 2:
+				for(int i = 1; i == 1;)
+				{
+					int opc_comer;
+					printf("\n\n			       --Comer--\n");
+					printf("			Comer una manzana...[1]");
+					printf("\n			Regresar............[4]");
+					printf("\n			");
+					scanf("%d", &opc_comer);
+	
+					switch(opc_comer)
+					{
+						case 1:
+							printf("\n			Mmmmm ¡rico! :D\n");
+							energia += 5;
+							hambre -= 15;
+							break;
+						case 2:
+							break;
+						case 3:
+							break;
+						case 4:
+							printf("\n			¡Gracias por alimentar tu Tamagochi!\n");
+							i++;
+							break;
+						default:
+							printf("\n			¡Error, opción inexistente!\n");
+							break;
+					}
+				}
 
 				break;
 			case 3:
