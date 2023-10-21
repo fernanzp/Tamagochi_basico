@@ -32,6 +32,7 @@ int main()
 				break;
 			case 4:
 				printf("\n			Energia: %d", energia);
+				printf("\n			Hambre:  %d", hambre);
 				break;
 			case 5:
 				printf("\n			¡Gracias por cuidar de tu Tamagochi!\n");
