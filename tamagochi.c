@@ -7,7 +7,7 @@
 int main()
 {
 	//Declaramos las variables
-	int opc;
+	int opc, hambre = 0, energia = 100;
 
 	for(int i = 1; i == 1;)
 	{
@@ -29,16 +29,15 @@ int main()
 
 				break;
 			case 3:
-
 				break;
 			case 4:
-
+				printf("\n			Energia: %d", energia);
 				break;
 			case 5:
+				printf("\n			¡Gracias por cuidar de tu Tamagochi!\n");
 				return 0;
-				break;
 			default:
-				printf("\n			Error, opción inexistente!\n");
+				printf("\n			¡Error, opción inexistente!\n");
 				return 1;
 		}
 	}
