@@ -103,6 +103,35 @@ int main()
 
 				break;
 			case 3:
+				for(int i = 1; i == 1;)
+				{
+					int opc_dormir;
+					printf("\n\n			       --Dormir--\n");
+					printf("			Dormir 30 min....[1]");
+					printf("\n			Regresar.........[4]");
+					printf("\n			");
+					scanf("%d", &opc_dormir);
+	
+					switch(opc_dormir)
+					{
+						case 1:
+							printf("\n			Zzz\n");
+							energia += 10;
+							hambre += 5;  
+							break;
+						case 2:
+							break;
+						case 3:
+							break;
+						case 4:
+							printf("\n			¡Gracias por jugar con tu Tamagochi!\n");
+							i++;
+							break;
+						default:
+							printf("\n			¡Error, opción inexistente!\n");
+							break;
+					}
+				}
 
 				break;
 			case 4:
