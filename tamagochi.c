@@ -108,6 +108,7 @@ int main()
 					int opc_dormir;
 					printf("\n\n			       --Dormir--\n");
 					printf("			Dormir 30 min....[1]");
+					printf("\n			Dormir 3 horas...[2]");
 					printf("\n			Regresar.........[4]");
 					printf("\n			");
 					scanf("%d", &opc_dormir);
@@ -120,6 +121,9 @@ int main()
 							hambre += 5;  
 							break;
 						case 2:
+							printf("\n			Zzz\n");
+							energia += 20;
+							hambre += 5;  
 							break;
 						case 3:
 							break;
