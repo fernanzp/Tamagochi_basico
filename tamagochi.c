@@ -117,28 +117,46 @@ int main()
 					switch(opc_dormir)
 					{
 						case 1:
-							printf("\n			Zzz\n");
-							energia += 10;
-							hambre += 5;  
+							if(energia < 100)
+							{
+								printf("\n			Zzz\n");
+								energia += 10;
+								hambre += 5;  
+							}else
+							{
+								printf("\n			Tu tamagochi no tiene sueño\n");
+							}
 							break;
 						case 2:
-							printf("\n			Zzz\n");
-							energia += 20;
-							hambre += 5;  
+							if(energia < 100)
+							{
+								printf("\n			Zzz\n");
+								energia += 20;
+								hambre += 5;  
+							}else
+							{
+								printf("\n			Tu tamagochi no tiene sueño\n");
+							}
 							break;
 						case 3:
-							printf("\n			Zzz\n");
-							energia += 30;
-							hambre += 5;  
+							if(energia < 100)
+							{
+								printf("\n			Zzz\n");
+								energia += 30;
+								hambre += 5;  
+							}else
+							{
+								printf("\n			Tu tamagochi no tiene sueño\n");
+							}
 							break;
 						case 4:
-							printf("\n			¡Gracias por jugar con tu Tamagochi!\n");
+							printf("\n			¡Tu tamagochi ya descanzó!\n");
 							i++;
 							break;
 						default:
 							printf("\n			¡Error, opción inexistente!\n");
 							break;
-					}
+					}	
 				}
 
 				break;
