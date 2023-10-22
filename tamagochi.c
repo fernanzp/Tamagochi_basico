@@ -109,6 +109,7 @@ int main()
 					printf("\n\n			       --Dormir--\n");
 					printf("			Dormir 30 min....[1]");
 					printf("\n			Dormir 3 horas...[2]");
+					printf("\n			Dormir 8 horas...[3]");
 					printf("\n			Regresar.........[4]");
 					printf("\n			");
 					scanf("%d", &opc_dormir);
@@ -126,6 +127,9 @@ int main()
 							hambre += 5;  
 							break;
 						case 3:
+							printf("\n			Zzz\n");
+							energia += 30;
+							hambre += 5;  
 							break;
 						case 4:
 							printf("\n			¡Gracias por jugar con tu Tamagochi!\n");
