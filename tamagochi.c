@@ -3,19 +3,27 @@
  * Nombre: Fernando Pérez Chávez
  */
 #include <stdio.h>
+#include <string.h>
 
 int main()
 {
 	//Declaramos las variables
-	int opc, hambre = 0, energia = 100;
+	int opc, hambre = 0, energia = 100, x = 1;
+	char nom[12];
 
-	for(int i = 1; i == 1;)
+	printf("\n			Ponle un nombre a tu tamagochi\n");
+	printf("			Nombre: ");
+	fgets(nom, 12, stdin);
+	nom[strcspn(nom, "\n")] = '\0';
+	x = 0;
+
+	for(int i = 1; i == 1 && x == 0;)
 	{
 		printf("\n\n			  --Tamagochi--\n");
 		printf("			Jugar.........[1]");
 		printf("\n			Comer.........[2]");
 		printf("\n			Dormir........[3]");
-		printf("\n			Ver estado....[4]");
+		printf("\n			Ver Estado....[4]");
 		printf("\n			Salir.........[5]");
 		printf("\n			");
 		scanf("%d", &opc);
@@ -59,6 +67,11 @@ int main()
 							printf("\n			¡Error, opción inexistente!\n");
 							break;
 					}
+					if(energia < 0 || hambre > 100)
+					{
+						printf("\n			%s murió T-T\n", nom);
+						return 0;
+					}
 				}
 
 				break;
@@ -77,19 +90,37 @@ int main()
 					switch(opc_comer)
 					{
 						case 1:
-							printf("\n			Mmmmm ¡rico! :D\n");
-							energia += 5;
-							hambre -= 15;
+							if(hambre >= 15)
+							{
+								printf("\n			Mmmmm ¡rico! :D\n");
+								energia += 5;
+								hambre -= 15;
+							}else
+							{
+								printf("\n			%s no tiene hambre\n", nom);
+							}
 							break;
 						case 2:
-							printf("\n			Mmmmm ¡rico! :D\n");
-							energia += 10;
-							hambre -= 20;
+							if(hambre >= 20)
+							{
+								printf("\n			Mmmmm ¡rico! :D\n");
+								energia += 10;
+								hambre -= 20;
+							}else
+							{
+								printf("\n			%s no tiene hambre\n", nom);
+							}
 							break;
 						case 3:
-							printf("\n			Mmmmm ¡rico! :D\n");
-							energia += 10;
-							hambre -= 15;
+							if(hambre >= 15)
+							{
+								printf("\n			Mmmmm ¡rico! :D\n");
+								energia += 10;
+								hambre -= 15;
+							}else
+							{
+								printf("\n			%s no tiene hambre\n", nom);
+							}
 							break;
 						case 4:
 							printf("\n			¡Gracias por alimentar tu Tamagochi!\n");
@@ -98,6 +129,11 @@ int main()
 						default:
 							printf("\n			¡Error, opción inexistente!\n");
 							break;
+					}
+					if(energia < 0 || hambre > 100)
+					{
+						printf("\n			%s murió T-T\n", nom);
+						return 0;
 					}
 				}
 
@@ -117,36 +153,36 @@ int main()
 					switch(opc_dormir)
 					{
 						case 1:
-							if(energia < 100)
+							if(energia <= 90)
 							{
 								printf("\n			Zzz\n");
 								energia += 10;
-								hambre += 5;  
+								hambre += 5;
 							}else
 							{
-								printf("\n			Tu tamagochi no tiene sueño\n");
+								printf("\n			%s no tiene sueño\n", nom);
 							}
 							break;
 						case 2:
-							if(energia < 100)
+							if(energia <= 80)
 							{
 								printf("\n			Zzz\n");
 								energia += 20;
 								hambre += 5;  
 							}else
 							{
-								printf("\n			Tu tamagochi no tiene sueño\n");
+								printf("\n			%s no tiene sueño\n", nom);
 							}
 							break;
 						case 3:
-							if(energia < 100)
+							if(energia <= 70)
 							{
 								printf("\n			Zzz\n");
 								energia += 30;
 								hambre += 5;  
 							}else
 							{
-								printf("\n			Tu tamagochi no tiene sueño\n");
+								printf("\n			%s no tiene sueño\n", nom);
 							}
 							break;
 						case 4:
@@ -157,10 +193,16 @@ int main()
 							printf("\n			¡Error, opción inexistente!\n");
 							break;
 					}	
+					if(energia < 0 || hambre > 100)
+					{
+						printf("\n			%s murió T-T\n", nom);
+						return 0;
+					}
 				}
 
 				break;
 			case 4:
+				printf("\n		         --Estado--");
 				printf("\n			Energia: %d", energia);
 				printf("\n			Hambre:  %d", hambre);
 				break;
